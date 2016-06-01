@@ -1,14 +1,17 @@
 import os
 
+
 def rename_file(directory, old, new):
-    new_names_list = old
-    if new in new_names_list: #verify if there is a remaned file with the new name
-        break
+    if new in os.listdir(directory):
+        print('this name was already added')
+        return
     else:
-    old_file = directory + '/' + old
-    new_file = directory + '/' + new
+        old_file = directory + '/' + old
+        new_file = directory + '/' + new
+        
     if os.path.exists(old_file): #rename a file that really exists
         os.rename(old_file, new_file)
+        print('file renamed')
     
 
 def change_name(directory):
@@ -22,8 +25,7 @@ def change_name(directory):
                 new_name = old_name[i+1:tam]
             i += 1
         rename_file(directory, old_name, new_name)
-    print('file renamed')
         
-PATH = 'C:/Users/eliete/Desktop/UdacityProjects/python/puzzle'
+PATH = 'C:/Users/eliete/Desktop/UdacityProjects/python/puzzle/prank'
 change_name(PATH)
 
