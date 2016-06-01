@@ -24,6 +24,6 @@ def change_name(directory):
         rename_file(directory, old_name, new_name)
     print('file renamed')
         
-PATH = 'C:/Users/eliete/Desktop/UdacityProjects/python/prank'
+PATH = 'C:/Users/eliete/Desktop/UdacityProjects/python/puzzle'
 change_name(PATH)
 
